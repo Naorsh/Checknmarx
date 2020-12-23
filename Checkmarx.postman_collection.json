@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "b129f249-b55a-4ec0-8c50-496611bd719b",
+		"name": "Checkmarx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"milk\",\r\n   \"price\": 3,\r\n   \"freeAmount\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/checkmarx/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"checkmarx",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/checkmarx/products/orange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"checkmarx",
+						"products",
+						"orange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products By Budget",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/checkmarx/products/criteria?name=milk&badget=15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"checkmarx",
+						"products",
+						"criteria"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "milk"
+						},
+						{
+							"key": "badget",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/checkmarx/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"checkmarx",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
